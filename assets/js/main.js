@@ -8,13 +8,6 @@
   "use strict";
   
 
-  // window.location.reload();
-  var refresh = window.sessionStorage.getItem('refresh');
-  if (refresh === null) {
-    window.sessionStorage.setItem('refresh', "1");
-    window.location.reload();
-  }
-
   // Preloader
   $(window).on('load', function() {
     if ($('#preloader').length) {
@@ -22,6 +15,12 @@
         $(this).remove();
       });
     }
+
+  var refresh = window.sessionStorage.getItem('refresh');
+  if (refresh === null) {
+          window.location.reload();
+    window.sessionStorage.setItem('refresh', "1");
+  }
   });
 
   // Hero typed
