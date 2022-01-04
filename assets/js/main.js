@@ -7,12 +7,13 @@
 !(function($) {
   "use strict";
   
-  
-  // var refresh = window.sessionStorage.getItem('refresh');
-  // if (refresh === null) {
-  //   window.location.reload();
-  //   window.sessionStorage.setItem('refresh', "1");
-  // }
+
+  // window.location.reload();
+  var refresh = window.sessionStorage.getItem('refresh');
+  if (refresh === null) {
+    window.location.reload();
+    window.sessionStorage.setItem('refresh', "1");
+  }
 
   // Preloader
   $(window).on('load', function() {
