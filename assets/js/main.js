@@ -15,12 +15,6 @@
         $(this).remove();
       });
     }
-
-  var refresh = window.sessionStorage.getItem('refresh');
-  if (refresh === null) {
-          window.location.reload();
-    window.sessionStorage.setItem('refresh', "1");
-  }
   });
 
   // Hero typed
